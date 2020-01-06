@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class HelloWorld : MonoBehaviour
 {
-    // Start is called before the first frame update
+     //Start is called before the first frame update
     void Start()
     {
-        Debug.Log("hello world 1 from start");
+        //Debug.Log("hello world 1 from start");
+        //print("hello world");
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.LogError("hello world 1 from update");
+        Debug.LogError("hello world 1 from update");
     }
 }
