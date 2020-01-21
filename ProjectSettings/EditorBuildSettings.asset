@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/HelloWorld/Hello World.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/UINumberWizarI/StartMenu.unity
+    guid: 549ac08e9cc124442aa8ec34f43ad5fa
+  - enabled: 1
+    path: Assets/Scenes/UINumberWizarI/Game Screen.unity
+    guid: 7036470232d4746069ac8007de691d4d
+  - enabled: 1
+    path: Assets/Scenes/UINumberWizarI/End Screen.unity
+    guid: 83db04d4267a54d3c85c78e8629c8e6e
   m_configObjects: {}
