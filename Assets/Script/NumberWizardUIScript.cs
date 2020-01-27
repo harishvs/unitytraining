@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class NumberWizardUIScript : MonoBehaviour
 {
-    int max;
-    int min;
+    [SerializeField]int max;
+    [SerializeField]  int min;
+    [SerializeField] TextMeshProUGUI guessText;
     int guess;
     // Start is called before the first frame update
     void Start()
@@ -15,23 +17,27 @@ public class NumberWizardUIScript : MonoBehaviour
 
     private void StartGame()
     {
-        max = 1000;
-        min = 1;
-        guess = 500;
+        NextGuess();
         max = max + 1;
     }
 
     public void HandleHigher()
     {
         min = guess;
-        guess = (min + max) / 2;
+        NextGuess();
 
+    }
+
+    private void NextGuess()
+    {
+        guess = (min + max) / 2;
+        guessText.text = guess.ToString();
     }
 
     public void HandleLower()
     {
         max = guess;
-        guess = (min + max) / 2;
+        NextGuess();
     }
 
     public void HandleCorrect()
@@ -39,32 +45,5 @@ public class NumberWizardUIScript : MonoBehaviour
         //load next screen
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //Detect when the up arrow key is pressed down
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Debug.Log("Up Arrow key was pressed.");
-            min = guess;
-            guess = (min + max) / 2;
-            Debug.Log("Guess is" + guess);
-        }
-        //Detect when the down arrow key is pressed down
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            max = guess;
-            guess = (min + max) / 2;
-            Debug.Log("down arrow key was pressed.");
-            Debug.Log("Guess is" + guess);
-        }
-
-        //Detect when the Return Key is pressed down
-        else if
-            (Input.GetKeyDown(KeyCode.Return))
-        {
-            Debug.Log("I am Genius.");
-            StartGame();
-        }
-    }
+  
 }
