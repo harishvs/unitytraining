@@ -39,11 +39,5 @@ public class NumberWizardUIScript : MonoBehaviour
         max = guess;
         NextGuess();
     }
-
-    public void HandleCorrect()
-    {
-        //load next screen
-    }
-
   
 }
